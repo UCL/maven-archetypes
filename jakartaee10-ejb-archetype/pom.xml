@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>uk.ac.ucl.cs</groupId>
+  <artifactId>jakartaee10-ejb-archetype</artifactId>
+  <version>1.0</version>
+  <packaging>maven-archetype</packaging>
+
+  <name>jakartaee10-ejb-archetype</name>
+
+  <url>https://github.com/UCL/maven-archetypes</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>17</maven.compiler.source>
+    <maven.compiler.target>17</maven.compiler.target>
+    <!-- https://mvnrepository.com/artifact/org.apache.maven.archetype/archetype-packaging -->
+    <version.archetype-packaging>3.2.1</version.archetype-packaging>
+    <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-clean-plugin -->
+    <version.maven-clean-plugin>3.2.0</version.maven-clean-plugin>
+    <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-archetype-plugin -->
+    <version.maven-archetype-plugin>3.2.1</version.maven-archetype-plugin>
+    <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-resources-plugin -->
+    <version.maven-resources-plugin>3.3.0</version.maven-resources-plugin>
+    <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-install-plugin -->
+    <version.maven-install-plugin>3.0.1</version.maven-install-plugin>
+    <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-deploy-plugin -->
+    <version.maven-deploy-plugin>3.0.0</version.maven-deploy-plugin>
+  </properties>
+
+  <build>
+    <extensions>
+      <extension>
+        <groupId>org.apache.maven.archetype</groupId>
+        <artifactId>archetype-packaging</artifactId>
+        <version>${version.archetype-packaging}</version>
+      </extension>
+    </extensions>
+    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+      <plugins>
+        <plugin>
+          <artifactId>maven-clean-plugin</artifactId>
+          <version>${version.maven-clean-plugin}</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-archetype-plugin</artifactId>
+          <version>${version.maven-archetype-plugin}</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-resources-plugin</artifactId>
+          <version>${version.maven-resources-plugin}</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-install-plugin</artifactId>
+          <version>${version.maven-install-plugin}</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-deploy-plugin</artifactId>
+          <version>${version.maven-deploy-plugin}</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+
+</project>
